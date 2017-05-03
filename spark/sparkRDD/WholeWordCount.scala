@@ -3,7 +3,6 @@ import org.apache.spark.{SparkConf, SparkContext}
 object WholeWordCount {
   
   def main(args: Array[String]): Unit = {
-    println("say love me.")
     val conf = new SparkConf().setAppName("WordCount").setMaster("local[*]")
     val sc = new SparkContext(conf)
     val textRDD = sc.textFile("D:\\david_work\\scala_work\\scala_mro_parser\\src\\wc.txt")
