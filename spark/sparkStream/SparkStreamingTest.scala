@@ -9,7 +9,7 @@ object MyFirstStreamingTest {
     val words = lines.flatMap(_.split(" "))
     val pairs = words.map(word => (word, 1))
     val wordCounts = pairs.reduceByKey(_ + _)
-    wordCounts.print()
+    wordCounts.print() //(zhangsan,3) (lisi,1)
 
     ssc.start()
     ssc.awaitTermination()
