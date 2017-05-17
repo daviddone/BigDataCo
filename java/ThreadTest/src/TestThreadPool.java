@@ -28,7 +28,7 @@ public class TestThreadPool {
         	}
         	Thread.sleep(200);
 		}
-        System.out.println("多线程结束");
+        System.out.println("1号多线程结束");
         threadPoolManager = null;
         ThreadPoolManager threadPoolManager1 = ThreadPoolManager.newInstance();  
         for (int i = 0; i < thread_num; i++) { 
@@ -42,7 +42,7 @@ public class TestThreadPool {
         	}
         	Thread.sleep(200);
 		}
-        System.out.println("多线程结束");
+        System.out.println("2号多线程结束");
     }  
     //创建map
     public static HashMap<Integer,Integer> createMap(){
