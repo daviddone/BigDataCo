@@ -5,7 +5,7 @@ import java.util.Map.Entry;
 
 public class TestThreadPool {  
   
-    public static void main(String[] args) {  
+    public static void main(String[] args) throws InterruptedException {  
 	
     	//需求：根据map的数量创建线程池  进行多线程 输出map中的所有元素 。
     	HashMap<Integer,Integer> map = createMap();
@@ -13,25 +13,41 @@ public class TestThreadPool {
     	for (Entry<Integer, Integer> entry : map.entrySet()) {
             writeList.add(entry.getKey());
         }
+    	int thread_num = 2;
         ThreadPoolManager threadPoolManager = ThreadPoolManager.newInstance();  
-        for (int i = 0; i < writeList.size(); i++) {  
-            threadPoolManager.addExecuteTask(new MyTask(writeList.get(i),map));  
-//            System.out.println("线程池中线程数目：" + threadPoolManager.getPoolSize() + "，队列中等待执行的任务数目："  
-//                    + threadPoolManager.getQueue() + "，已执行玩别的任务数目：" + threadPoolManager.getCompletedTaskCount());  
+        for (int i = 0; i < thread_num; i++) {  
+            threadPoolManager.addExecuteTask(new MyTask(writeList,map,i,thread_num));  
+            System.out.println("线程池中线程数目：" + threadPoolManager.getPoolSize() + "，队列中等待执行的任务数目："  
+                    + threadPoolManager.getQueue() + "，已执行玩别的任务数目：" + threadPoolManager.getCompletedTaskCount());  
         }  
         threadPoolManager.shutdown();  
         while (true) {
-        	boolean end = threadPoolManager.isTaskEnd();
-        	if(end == true){
+        	if(threadPoolManager.isEnd()){
+        		System.out.println("1号线程池 执行完毕");
         		break;
         	}
+        	Thread.sleep(200);
+		}
+        System.out.println("多线程结束");
+        threadPoolManager = null;
+        ThreadPoolManager threadPoolManager1 = ThreadPoolManager.newInstance();  
+        for (int i = 0; i < thread_num; i++) { 
+        		threadPoolManager1.addExecuteTask(new MyTask(writeList,map,i,thread_num));  
+        }  
+        threadPoolManager1.shutdown();  
+        while (true) {
+        	if(threadPoolManager1.isEnd()){
+        		System.out.println("2号线程池执行完毕 ");
+        		break;
+        	}
+        	Thread.sleep(200);
 		}
         System.out.println("多线程结束");
     }  
     //创建map
     public static HashMap<Integer,Integer> createMap(){
     	HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
-    	for (int i = 0; i < 100; i++) {
+    	for (int i = 0; i < 9; i++) {
 			map.put(i, i);
 		}
     	return map;
@@ -41,23 +57,25 @@ public class TestThreadPool {
   
 //class MyTask extends Thread {  
 class MyTask implements Runnable {  
-    private int taskNum;  
+    private List<Integer> lists;  
     private HashMap<Integer,Integer> map;
-    public MyTask(int taskNum,HashMap<Integer,Integer> map) {  
-        this.taskNum = taskNum;  
+    private int thread_num;
+    private int max_thread_num;
+    public MyTask(List<Integer> lists,HashMap<Integer,Integer> map,int thread_num,int max_thread_num) {  
+        this.lists = lists;  
         this.map = map;
+        this.thread_num = thread_num;
+        this.max_thread_num = max_thread_num;
     }  
   
     public void run() {  
-        System.out.println("多线程输出的结果： " + map.get(taskNum));  
-        System.out.println("task " + taskNum + "执行完毕");  
+    	for (int i = 0; i < lists.size(); i++) {
+    		if (i % max_thread_num != thread_num)
+    			continue;
+    		 System.out.println("多线程输出的结果： " + map.get(i));  
+//    	     System.out.println("task " + thread_num + "执行完毕");  
+		}
+       
     }  
   
-    public int getTaskNum() {  
-        return taskNum;  
-    }  
-  
-    public void setTaskNum(int taskNum) {  
-        this.taskNum = taskNum;  
-    }  
 }

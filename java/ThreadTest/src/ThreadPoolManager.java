@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
  */  
 public final class ThreadPoolManager {  
   
-    private static ThreadPoolManager sThreadPoolManager = new ThreadPoolManager();  
+    private static ThreadPoolManager sThreadPoolManager = null;  
   
     // 线程池维护线程的最少数量  
     private static final int SIZE_CORE_POOL = 15;  
@@ -19,6 +19,7 @@ public final class ThreadPoolManager {
      * 线程池单例创建方法  
      */  
     public static ThreadPoolManager newInstance() {  
+    	sThreadPoolManager = new ThreadPoolManager();
         return sThreadPoolManager;  
     }  
   
@@ -117,4 +118,12 @@ public final class ThreadPoolManager {
     public void shutdown() {  
         mThreadPool.shutdown();  
     }  
+    
+    /*  
+     * 判断线程池是否结束  
+     */  
+    public boolean isEnd() {  
+        return mThreadPool.isTerminated();
+    } 
+    
 }  
