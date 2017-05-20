@@ -17,8 +17,8 @@ public class TestThreadPool {
         ThreadPoolManager threadPoolManager = ThreadPoolManager.newInstance();  
         for (int i = 0; i < thread_num; i++) {  
             threadPoolManager.addExecuteTask(new MyTask(writeList,map,i,thread_num));  
-            System.out.println("线程池中线程数目：" + threadPoolManager.getPoolSize() + "，队列中等待执行的任务数目："  
-                    + threadPoolManager.getQueue() + "，已执行玩别的任务数目：" + threadPoolManager.getCompletedTaskCount());  
+            //System.out.println("线程池中线程数目：" + threadPoolManager.getPoolSize() + "，队列中等待执行的任务数目："  
+             //       + threadPoolManager.getQueue() + "，已执行玩别的任务数目：" + threadPoolManager.getCompletedTaskCount());  
         }  
         threadPoolManager.shutdown();  
         while (true) {
