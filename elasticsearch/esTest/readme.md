@@ -1,0 +1,1 @@
+海量数据存储，全文检索和分析  基于 elasticsearch 2.3.5 api 
