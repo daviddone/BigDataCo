@@ -43,7 +43,7 @@ public class FingerPrintHdfsUtil {
 		Map<String, List<FingerBean>> ScRsrpMap = new HashMap<String, List<FingerBean>>();
 		System.out.println("file begin:");
 		for (String line:lines) {
-//			System.out.println(line);
+			System.out.println(line);
 			String[] datas = line.split(";");
 			if(datas.length<6){
 				continue;
@@ -98,7 +98,7 @@ public class FingerPrintHdfsUtil {
 		int scLength = (list_Data.size()>6)?6:list_Data.size();
 	 	for(int i=0 ; i<scLength ;i++){ 
 	 		 Map.Entry<String, List<FingerBean>> map = list_Data.get(i);
-//             System.out.println(map.getKey()+":"+map.getValue()); //对第一小区，对其邻区进行计数和排序。
+             System.out.println(map.getKey()+":"+map.getValue()); //对第一小区，对其邻区进行计数和排序。
              List<FingerBean> ncRsrpList = map.getValue();
              Map<String, NcCellRsrpSortBean> ncRsrpSumMap = new HashMap<String, NcCellRsrpSortBean>();
              int scRsrpSum = 0;
@@ -135,7 +135,7 @@ public class FingerPrintHdfsUtil {
      			 Map.Entry<String, NcCellRsrpSortBean> ncmap = nc_list_Data.get(j);
                  double ncRsrpAvg = ncmap.getValue().getNcRsrpAvg();
                  ncLine.append(ncmap.getKey()+","+ncRsrpAvg+";");
-//                 System.out.println("###"+ncLine.toString());
+                 System.out.println("###"+ncLine.toString());
      		 }
      		 
 	 		 StringBuffer sbLine = new StringBuffer();

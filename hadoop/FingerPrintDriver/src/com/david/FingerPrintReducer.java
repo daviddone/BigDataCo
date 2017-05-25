@@ -12,12 +12,11 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.output.MultipleOutputs;
 
 import com.david.finger.util.FingerPrintHdfsUtil;
-import com.david.finger.util.JVMUtil;
 
 public class FingerPrintReducer extends Reducer<NullWritable,Text,Text,NullWritable> {
 	  
   	private Text result=new Text();
-  	private List<String> lists = new ArrayList<String>();
+  	private List<String> lists = null;
   	private Map<String,List<String>> map = new HashMap<String,List<String>>();
   	private MultipleOutputs<Text, NullWritable> multipleOutputs;
   	private String destPath = "";
@@ -50,17 +49,11 @@ public class FingerPrintReducer extends Reducer<NullWritable,Text,Text,NullWrita
     @Override
     protected void cleanup(org.apache.hadoop.mapreduce.Reducer.Context context)
     		throws IOException, InterruptedException {
-//    	super.cleanup(context);
+    	super.cleanup(context);
+    	System.out.println("list.size :"+lists.size());
     	for (Map.Entry<String, List<String>> entry : map.entrySet()) {  
-            System.out.println("key = " + entry.getKey());
-            System.out.println(JVMUtil.getMemoryStatus());
-            lists = entry.getValue();
-            try {
-            	FingerPrintHdfsUtil.writeFinger(lists, destPath,result,multipleOutputs,entry.getKey());
-			} catch (Exception e) {
-				e.printStackTrace();
-				System.out.println("此条数据 有误  entry.getKey()");
-			}
+            System.out.println("key = " + entry.getKey() + " and value = " + entry.getValue());  
+            FingerPrintHdfsUtil.writeFinger(lists, destPath,result,multipleOutputs,entry.getKey());
         }  
     	multipleOutputs.close();
     }
