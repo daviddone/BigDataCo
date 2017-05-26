@@ -1,0 +1,1 @@
+Hbase完成passage文章表的CRUD操作。
