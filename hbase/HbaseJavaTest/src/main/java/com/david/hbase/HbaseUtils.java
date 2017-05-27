@@ -319,14 +319,9 @@ public class HbaseUtils {
         try {
 
             //列出表信息
-//            HTableDescriptor[] tables = listTables(config);
-//            printTables(tables);
-
-            //插入10000行
-//            for (int i = 1; i < 200000; i++){
-//            	insertRow(namespace,tablename, config, i+"", column_family[0], "", "value");
-//            	insertRow(tablename, config, i+"", column_family[0], "title", "文章标题"+i);
-//            }
+            HTableDescriptor[] tables = listTables(config);
+            printTables(tables);
+            //为同一条数据 按列赋值 
         	insertRow(tablename, config, 2+"", column_family[0], "title", "文章标题222");
         	insertRow(tablename, config, 2+"", column_family[0], "content", "zhangsan");
             //获取单行值
@@ -334,13 +329,11 @@ public class HbaseUtils {
             showCell(result);
 
             //扫描表，获取前20行
-//            List<Result> results = scanData(namespace+":"+tablename, config, 20);
             List<Result> results = scanData(tablename, config, 20);
             for (Result r : results) {
                 showCell(r);
             }
             deleRow(null,tablename,config,"2",column_family[0]);
-//            deleteTable(tablename, config);
 
         } catch (Exception e) {
             e.printStackTrace();

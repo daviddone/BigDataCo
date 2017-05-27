@@ -1,12 +1,12 @@
 package com.david.hbase;
 
-import static org.junit.Assert.*;
-
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.HTableDescriptor;
+import org.apache.hadoop.hbase.client.Result;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -42,10 +42,22 @@ public class HbaseUtilsTest {
 		HbaseUtils.creatTable(tableName, family, config, splitbytes);
 		logger.info("create table done ");
 	}
-
+	
 	@Test
-	public void testDeleteTable() {
-		fail("Not yet implemented");
+	public void testInsertRow() throws Exception {
+		String namespace="namespace";
+		String tablename = "passage";
+		String[] column_family = {"info"};
+        //插入10000行
+		for (int i = 1; i < 200000; i++){
+			HbaseUtils.insertRow(tablename, config, i+"", column_family[0], "title", "文章标题"+i);
+		}
+	}
+	
+	@Test
+	public void testDeleteTable() throws Exception {
+		String tablename = "passage2";
+		HbaseUtils.deleteTable(tablename, config);
 	}
 
 	@Test
@@ -54,7 +66,14 @@ public class HbaseUtilsTest {
         HTableDescriptor[] tables = HbaseUtils.listTables(config);
         HbaseUtils.printTables(tables);
 	}
-
 	
+	@Test
+	public void testScanData() throws Exception {
+		String tablename = "passage";
+		List<Result> results = HbaseUtils.scanData(tablename, config, 20);
+		for (Result r : results) {
+			HbaseUtils.showCell(r);
+        }
+	}
 
 }
