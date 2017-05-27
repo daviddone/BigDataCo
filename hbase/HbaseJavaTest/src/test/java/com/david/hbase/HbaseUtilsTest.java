@@ -49,14 +49,14 @@ public class HbaseUtilsTest {
 		String tablename = "passage";
 		String[] column_family = {"info"};
         //插入10000行
-		for (int i = 1; i < 200000; i++){
-			HbaseUtils.insertRow(tablename, config, i+"", column_family[0], "title", "文章标题"+i);
+		for (int i = 1; i < 20; i++){
+			HbaseUtils.insertRow(tablename, config, i+"", column_family[0], "title", "好消息标题"+i);
 		}
 	}
 	
 	@Test
 	public void testDeleteTable() throws Exception {
-		String tablename = "passage2";
+		String tablename = "passage";
 		HbaseUtils.deleteTable(tablename, config);
 	}
 
@@ -70,10 +70,51 @@ public class HbaseUtilsTest {
 	@Test
 	public void testScanData() throws Exception {
 		String tablename = "passage";
-		List<Result> results = HbaseUtils.scanData(tablename, config, 20);
+		List<Result> results = HbaseUtils.scanData(tablename, config, 1);
 		for (Result r : results) {
 			HbaseUtils.showCell(r);
         }
+	}
+	@Test
+	public void testScanDataRowKey() throws Exception {
+		String tablename = "passage";
+		List<Result> results = HbaseUtils.scanData(tablename, config, "1", "26", 10);
+		for (Result r : results) {
+			HbaseUtils.showCell(r);
+		}
+	}
+	
+	@Test
+	public void testUpdateDataByRowKey() throws Exception {
+		String tablename = "passage";
+		HbaseUtils.insertRow(tablename, config, 9 + "", "info", "title",
+				"zhangsan");
+	}
+	
+	@Test
+	public void testFilterRowKeyData() throws Exception {
+		String tableName = "passage";
+		String filterInfo = "1";
+		List<Result> results = HbaseUtils.filterRowkeyData(tableName, config, filterInfo);
+		for (Result r : results) {
+			HbaseUtils.showCell(r);
+		}
+	}
+	@Test
+	public void testFilterColumnData() {
+		try {
+			String tableName = "passage";
+			String colFamily = "info";
+			String col = "title";
+//			String filterInfo = "zhangsan";
+			String filterInfo = "好消息";// 中文模糊查詢 
+			List<Result> results = HbaseUtils.filterColumnData(tableName, config, colFamily, col, filterInfo);
+			for (Result r : results) {
+				HbaseUtils.showCell(r);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
