@@ -2,12 +2,19 @@ package com.david.hbase;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.HTableDescriptor;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HbaseUtilsTest {
+	static Logger logger = LoggerFactory.getLogger(HbaseUtils.class);
+	
 	static Configuration config = HBaseConfiguration.create();
 	static{
 //		推荐 部署方式
@@ -33,12 +40,7 @@ public class HbaseUtilsTest {
 		String[] family = {"author","info"}; 
 		byte[][] splitbytes = null; 	
 		HbaseUtils.creatTable(tableName, family, config, splitbytes);
-		System.out.println("create done");
-	}
-
-	@Test
-	public void testCreatTableForce() {
-		fail("Not yet implemented");
+		logger.info("create table done ");
 	}
 
 	@Test
@@ -47,78 +49,12 @@ public class HbaseUtilsTest {
 	}
 
 	@Test
-	public void testListTables() {
-		fail("Not yet implemented");
+	public void testListTables() throws IOException {
+		//列出表信息
+        HTableDescriptor[] tables = HbaseUtils.listTables(config);
+        HbaseUtils.printTables(tables);
 	}
 
-	@Test
-	public void testInsertRowStringStringConfigurationStringStringStringString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testInsertRowStringConfigurationStringStringStringString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testDeleRowStringStringConfigurationStringStringString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testDeleRowStringStringConfigurationStringString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testDeleRowStringStringConfigurationString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetDataStringStringConfigurationStringStringString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetDataStringStringConfigurationStringString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetDataStringStringConfigurationString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testScanDataStringConfigurationStringStringInt() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testScanDataStringConfigurationInt() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testPrintTables() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testShowCell() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetFirstCellValue() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testMain() {
-		fail("Not yet implemented");
-	}
+	
 
 }

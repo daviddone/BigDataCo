@@ -278,7 +278,8 @@ public class HbaseUtils {
             HColumnDescriptor[] columns = t.getColumnFamilies();
             logger.info(String.format("tables:%s,columns-family:\n", t.getTableName()));
             for (HColumnDescriptor column : columns) {
-                logger.info(String.format("\t%s\n", column.getNameAsString()));
+//                logger.info(String.format("\t%s\n", column.getNameAsString()));
+                logger.info(column.getNameAsString());
             }
         }
     }
@@ -310,32 +311,36 @@ public class HbaseUtils {
 
     public static void main(String... args) {
         Configuration config = HBaseConfiguration.create();
-        config.set("hbase.zookeeper.property.clientPort", "2181");
-        config.set("hbase.zookeeper.quorum", "192.168.11.73");
-        config.set("hbase.master", "192.168.11.73:60000");
+        config.set("hbase.zookeeper.quorum", "vm10.60.0.11.com.cn,vm10.60.0.7.com.cn,vm10.60.0.8.com.cn");// hbase-site.xml中zookeeper的配置
+	    config.set("hbase.zookeeper.property.clientPort", "2181");
         String namespace="namespace";
-        String tablename = "visitor";
-        String[] column_family = {"col"};
+        String tablename = "passage";
+        String[] column_family = {"info"};
         try {
 
             //列出表信息
-            HTableDescriptor[] tables = listTables(config);
-            printTables(tables);
+//            HTableDescriptor[] tables = listTables(config);
+//            printTables(tables);
 
             //插入10000行
-            for (int i = 1; i < 2; i++)
-                insertRow(namespace,tablename, config, i+"", column_family[0], "", "value");
-
+//            for (int i = 1; i < 200000; i++){
+//            	insertRow(namespace,tablename, config, i+"", column_family[0], "", "value");
+//            	insertRow(tablename, config, i+"", column_family[0], "title", "文章标题"+i);
+//            }
+        	insertRow(tablename, config, 2+"", column_family[0], "title", "文章标题222");
+        	insertRow(tablename, config, 2+"", column_family[0], "content", "zhangsan");
             //获取单行值
-            Result result = getData(namespace,tablename, config, "2", column_family[0]);
+            Result result = getData(null,tablename, config, "2", column_family[0]);
             showCell(result);
 
             //扫描表，获取前20行
-            List<Result> results = scanData(namespace+":"+tablename, config, 20);
+//            List<Result> results = scanData(namespace+":"+tablename, config, 20);
+            List<Result> results = scanData(tablename, config, 20);
             for (Result r : results) {
                 showCell(r);
             }
-            deleRow(namespace,tablename,config,"2",column_family[0]);
+            deleRow(null,tablename,config,"2",column_family[0]);
+//            deleteTable(tablename, config);
 
         } catch (Exception e) {
             e.printStackTrace();
