@@ -87,7 +87,7 @@ public class HbaseUtilsTest {
 	@Test
 	public void testUpdateDataByRowKey() throws Exception {
 		String tablename = "passage";
-		HbaseUtils.insertRow(tablename, config, 9 + "", "info", "title",
+		HbaseUtils.insertRow(tablename, config, 9+"", "info", "title",
 				"zhangsan");
 	}
 	
