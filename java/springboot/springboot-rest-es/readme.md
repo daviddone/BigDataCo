@@ -1,1 +1,1 @@
-springboot rest api 提供 elasticsearch 搜索服务接口
+springboot rest api 鎻愪緵 elasticsearch 鎼滅储鏈嶅姟鎺ュ彛
