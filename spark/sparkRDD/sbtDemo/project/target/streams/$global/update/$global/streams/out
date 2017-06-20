@@ -1,4 +1,4 @@
-[info] Updating {file:/D:/david_study/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/sbtDemo/project/}sbtdemo-build...
+[info] Updating {file:/D:/david_study/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/github%E7%9B%B8%E5%85%B3/BigDataCo/spark/sparkRDD/sbtDemo/project/}sbtdemo-build...
 [debug] :: resolving dependencies :: default#sbtdemo-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
@@ -1098,9 +1098,9 @@
 [debug] == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.6 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -1111,9 +1111,9 @@
 [debug] == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -1155,9 +1155,9 @@
 [debug] == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -2941,9 +2941,9 @@
 [debug] == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.6 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -2954,9 +2954,9 @@
 [debug] == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -3000,9 +3000,9 @@
 [debug] == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -4969,9 +4969,9 @@
 [debug] == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.6 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -4982,9 +4982,9 @@
 [debug] == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -5032,9 +5032,9 @@
 [debug] == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] excluding dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scalap;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -6009,19 +6009,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 2618ms :: artifacts dl 62ms
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT compile produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-compile.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT runtime produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-runtime.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT test produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-test.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT provided produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-provided.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT optional produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-optional.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT compile-internal produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-compile-internal.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT runtime-internal produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-runtime-internal.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT test-internal produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-test-internal.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT plugin produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-plugin.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT sources produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-sources.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT docs produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-docs.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT pom produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-pom.xml
-[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT scala-tool produced in D:\david_study\源码阅读\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-scala-tool.xml
-[debug] 	resolve done (2618ms resolve - 62ms download)
+[debug] :: resolution report :: resolve 5485ms :: artifacts dl 179ms
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT compile produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-compile.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT runtime produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-runtime.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT test produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-test.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT provided produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-provided.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT optional produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-optional.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT compile-internal produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-compile-internal.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT runtime-internal produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-runtime-internal.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT test-internal produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-test-internal.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT plugin produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-plugin.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT sources produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-sources.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT docs produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-docs.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT pom produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-pom.xml
+[debug] 	report for default#sbtdemo-build;0.1-SNAPSHOT scala-tool produced in D:\david_study\源码阅读\github相关\BigDataCo\spark\sparkRDD\sbtDemo\project\target\resolution-cache\reports\default-sbtdemo-build-scala-tool.xml
+[debug] 	resolve done (5485ms resolve - 179ms download)
 [info] Done updating.

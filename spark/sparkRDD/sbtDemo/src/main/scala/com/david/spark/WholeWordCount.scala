@@ -1,3 +1,5 @@
+package com.david.spark
+
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.{SparkConf, SparkContext}
 //原始数据格式\n： zhangsan	lisi	lisi	zhangsan	wangwu
