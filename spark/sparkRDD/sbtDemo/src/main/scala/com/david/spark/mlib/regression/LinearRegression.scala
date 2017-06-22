@@ -4,7 +4,7 @@ import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.regression.{LabeledPoint, LinearRegressionWithSGD}
 import org.apache.spark.{SparkConf, SparkContext}
 
-//线性相关 小数据量
+//线性相关 随机梯度下降 小数据量
 object LinearRegression {
   def main(args: Array[String]) {
     Logger.getLogger("org").setLevel(Level.ERROR)
