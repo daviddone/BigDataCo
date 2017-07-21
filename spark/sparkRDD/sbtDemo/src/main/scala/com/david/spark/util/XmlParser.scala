@@ -16,7 +16,7 @@ object XmlParser {
       }
       val xmlFile = XML.load("data/util/wechat.xml") // 中文路径乱码
       println(xmlFile)
-      val fromUserName = (xmlFile\"FromUserName").text.toString.trim() 
+      val fromUserName = (xmlFile\"FromUserName").text.toString.trim()
       println("fromUserName:"+fromUserName)
   }
 
