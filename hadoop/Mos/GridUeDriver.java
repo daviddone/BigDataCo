@@ -68,8 +68,7 @@ public class GridUeDriver extends Configured implements Tool{
 	     job.setReducerClass(GridUeReducer.class);
 	     FileOutputFormat.setCompressOutput(job, false); 
 	     
-//	     job.setNumReduceTasks(0);
-//	     job.setNumReduceTasks(200);
+	     job.setNumReduceTasks(200);
 	     
 	     FileSystem fs =FileSystem.get(config);
 	     Path outpath =new Path(step1Path);
@@ -94,7 +93,6 @@ public class GridUeDriver extends Configured implements Tool{
 			System.out.println("gridue step failed.....");
 			System.exit(ret);
 		}
-//		System.exit(ret);
 	}
 	
 }
