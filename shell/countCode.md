@@ -15,3 +15,12 @@ wc -l allText
 find .|xargs grep -ri "join" -l
 
 ```
+
+
+##### 30万个文件，采用mv移动，文件参数过长替代方案
+
+```
+
+find /home1/oozie/oozie_wy/david/ini -type f -name '*.*' -exec mv {} /home1/oozie/oozie_wy/david/wy/ \;
+
+```
