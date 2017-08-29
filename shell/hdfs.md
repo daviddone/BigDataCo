@@ -12,3 +12,5 @@ hdfs dfs -mv gx_mro/lte_mro_ZTE_2017070423_20170718073025362_816 gx_mro/input/<b
 hdfs dfs -du -h /user/david/  列出文件夹下的所有文件夹大小<br>
 hdfs dfs -du -s -h /user/david/  列出指定文件夹大小
 
+##### 查看复制因子
+hdfs fsck /user/boco/cdr/output/gridue/
