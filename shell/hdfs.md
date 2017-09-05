@@ -13,4 +13,9 @@ hdfs dfs -du -h /user/david/  列出文件夹下的所有文件夹大小<br>
 hdfs dfs -du -s -h /user/david/  列出指定文件夹大小
 
 ##### 查看复制因子
-hdfs fsck /user/boco/cdr/output/gridue/
+hdfs fsck /user/boco/cdr/output/gridue
+
+##### 查看任务并杀掉
+hadoop job -list  <br>
+hadoop job -kill job_876554
+
