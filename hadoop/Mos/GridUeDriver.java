@@ -46,6 +46,7 @@ public class GridUeDriver extends Configured implements Tool{
 //		 config.set("mapreduce.map.java.opts", "-Xmx2048m");//2G
 //		 config.set("mapreduce.reduce.memory.mb", "4096");//4G
 //		 config.set("mapreduce.reduce.java.opts", "-Xmx4000m");//4G
+
 		 
 		 Job job = Job.getInstance(config);
 		 job.setJarByClass(GridUeDriver.class);
