@@ -3,6 +3,9 @@
 ##### 列出文件
 hdfs dfs -ls /user/david
 
+##### 删除文件
+hdfs dfs -rm -r oozie_wy/lib/*  删除文件夹下所有文件 <br>
+hdfs dfs -rm -r oozie_wy/schedule 删除指定文件夹
 
 ##### 文件移动到另外的路径下：
 hdfs dfs -mkdir gx_mro/input/   <br>
