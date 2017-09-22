@@ -22,3 +22,9 @@ hdfs fsck /user/boco/cdr/output/gridue
 hadoop job -list  <br>
 hadoop job -kill job_876554
 
+##### oozie杀掉job 
+oozie job -oozie http://localhost:11000/oozie -kill jobID  <br>
+oozie job -oozie http://localhost:11000/oozie -kill 0000004-170914151823015-oozie-oozi-W
+
+##### oozie查看任务的外部id
+oozie job -oozie http://localhost:11000/oozie -info 0000004-170914151823015-oozie-oozi-W
