@@ -5,6 +5,20 @@ tree -a project
 
 ```
 
+##### 一周内所有修改的java文件
+```
+
+find -name "*.java" -mtime -7
+
+```
+
+##### 批量删除文件
+```
+
+find -name "*.sh" -exec rm {} \;
+
+```
+
 ##### 将文件夹下的java类内容合并
 ```
 
