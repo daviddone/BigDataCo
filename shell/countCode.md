@@ -4,7 +4,12 @@
 tree -a project
 
 ```
+##### 搜寻比10K大的java文件
+```
 
+find -name "*.java" -size +10k
+
+```
 ##### 一周内所有修改的java文件
 ```
 
