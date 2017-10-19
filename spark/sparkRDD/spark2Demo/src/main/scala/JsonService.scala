@@ -4,7 +4,6 @@ import org.apache.log4j.{Level, Logger}
 object JsonService {
   def main(args: Array[String]): Unit = {
     Logger.getLogger("org").setLevel(Level.ERROR)
-    val strAppName = "Json2SQL"
     //方便调试，如果运行在集群上，需要将master设置为yarn-cluster
     var strMaster = "local[*]"
     if (args.length == 1) {
@@ -13,7 +12,7 @@ object JsonService {
     val spark = SparkSession
       .builder()
       .master(strMaster)
-      .appName(strAppName)
+      .appName("Json2SQL")
       .getOrCreate()
     val df_ip = spark.read.json("data/asset_ip.json") //多条json数据
     df_ip.createOrReplaceTempView("asset_ip")
