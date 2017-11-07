@@ -1,3 +1,5 @@
+import java.io.{File, PrintWriter}
+
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -17,5 +19,11 @@ object FileHelper {
     }
     val wholeText = Source.fromFile("data/TD-LTE_MRO_ZTE_OMC1_975750_20170222180000.xml" ).mkString
     val wholeLines = Source.fromFile("data/TD-LTE_MRO_ZTE_OMC1_975750_20170222180000.xml").getLines()
+  }
+
+  def writeData(line:String,fileName:String): Unit ={
+    val writer = new PrintWriter(new File(fileName))
+    writer.write(line)
+    writer.close()
   }
 }
