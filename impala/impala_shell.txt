@@ -1,0 +1,21 @@
+impala-shell环境：
+impala-shell    # 进入环境
+connect 192.168.1.125;   #连接impala，除了主节点一般都装了impala
+
+impala命令：
+impala-shell -i 10.25.92.11 -d mdt -q "refresh "tps_mdt_shw_base_extend;
+impala-shell -i 10.25.92.11 -d mdt -q "refresh "tps_mdt_r_dtgrid_e_p_day;
+impala-shell -i 10.25.92.11 -d mdt -q "refresh "tps_mdt_s_r_day;
+impala-shell -i 10.25.92.11 -d mdt -q "refresh "tps_mdt_s_r_p_day;
+impala-shell -i 10.25.92.11 -d mdt -q "refresh "tps_mdt_join_base;  # 仅刷新表数据
+
+impala-shell -q 'invalidate metadata'
+impala-shell -i 10.25.92.11 -q 'invalidate metadata'  #刷新表结构和数据
+
+impala可视化界面：
+可访问hue：直接查询。
+
+impala客户端：
+DbVisual
+
+
