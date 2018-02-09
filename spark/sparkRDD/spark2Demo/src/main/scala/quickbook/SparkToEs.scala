@@ -33,7 +33,7 @@ object SparkToEs {
           "time" -> time)
       }).saveToEs("spark/docs")
     })
-    //sc.makeRDD(Seq(numbers, airports)).saveToEs("spark/docs") spark/docs下的Elasticsearch索引内容（数字和机场）
+    //sc.makeRDD(Seq(numbers, airports)).saveToEs("spark/docs")spark/docs下的Elasticsearch索引内容（数字和机场）
 
     ssc.start()
     ssc.awaitTermination()

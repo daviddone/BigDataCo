@@ -16,7 +16,7 @@ object SparkReadEs {
     conf.set("es.port", "9200")//port
     val sc = new SparkContext(conf)
     val rdd = sc.esRDD("spark/docs")
-//    sc.esRDD("radio/artists", "?q=me*")   匹配关键字的相关数据
+//    sc.esRDD("radio/artists", "?q=me*")  匹配关键字的相关数据
     rdd.foreach(x=>print(x))//所有数据
     print(rdd.count())  //数据总计
   }
