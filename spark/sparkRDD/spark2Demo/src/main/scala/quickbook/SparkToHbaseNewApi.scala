@@ -34,12 +34,12 @@ object SparkToHbaseNewApi {
     job.setOutputFormatClass(classOf[TableOutputFormat[ImmutableBytesWritable]])
 
 
-    val indataRDD = sc.makeRDD(Array("4,jack,15","5,Lily1,16","6,mike,16"))
+    val indataRDD = sc.makeRDD(Array("7,jack,15","8,Lily1,16","9,mike,16"))
 
     val rdd = indataRDD.map(_.split(',')).map{arr=>{
       val put = new Put(Bytes.toBytes(arr(0).toInt))
-      put.add(Bytes.toBytes("cf"),Bytes.toBytes("name"),Bytes.toBytes(arr(1)))
-      put.add(Bytes.toBytes("cf"),Bytes.toBytes("age"),Bytes.toBytes(arr(2).toInt))
+      put.addColumn(Bytes.toBytes("cf"),Bytes.toBytes("name"),Bytes.toBytes(arr(1)))
+      put.addColumn(Bytes.toBytes("cf"),Bytes.toBytes("age"),Bytes.toBytes(arr(2).toInt))
       (new ImmutableBytesWritable, put)
     }}
     //使用新API保存到HBase表
